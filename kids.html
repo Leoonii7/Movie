@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-details {
+            padding: 20px;
+        }
+
+        .movie-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(20% - 20px); /* 20% width for each movie with 20px margin in between */
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        li img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .movie-info {
+            text-align: center;
+        }
+
+        .movie-info h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        .movie-info {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        
+        .selected .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .movie {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+    
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <ul class="movie-list">
+        <li class="movie">
+            <img src="./movie/tomandjerryjpg.jpg" alt="Tom and Jerry">
+            <div class="movie-info">
+                <h3>Tom and Jerry</h3>
+                <p><strong>Release Year:</strong> 1940</p>
+                <p>Tom, the cat, and Jerry, the mouse, engage in hilarious and endless comedic antics.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/spongebob.jpg" alt="SpongeBob SquarePants">
+            <div class="movie-info">
+                <h3>SpongeBob SquarePants</h3>
+                <p><strong>Release Year:</strong> 1999</p>
+                <p>Join SpongeBob and his friends in the underwater city of Bikini Bottom for wacky adventures.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/toy.jpeg" alt="Toy Story">
+            <div class="movie-info">
+                <h3>Toy Story</h3>
+                <p><strong>Release Year:</strong> 1995</p>
+                <p>Join Woody, Buzz Lightyear, and other toys in this heartwarming tale of friendship and adventure.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/frozen.jpeg" alt="Frozen">
+            <div class="movie-info">
+                <h3>Frozen</h3>
+                <p><strong>Release Year:</strong> 2013</p>
+                <p>Follow the journey of two sisters, Elsa and Anna, in this magical and musical Disney animation.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/minions.jpg" alt="Despicable Me">
+            <div class="movie-info">
+                <h3>Despicable Me</h3>
+                <p><strong>Release Year:</strong> 2010</p>
+                <p>Meet the lovable supervillain Gru and his mischievous Minions in this hilarious animated film.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/nemo.jpeg" alt="Finding Nemo">
+            <div class="movie-info">
+                <h3>Finding Nemo</h3>
+                <p><strong>Release Year:</strong> 2003</p>
+                <p>Join Marlin and Dory on an epic underwater adventure to find Marlin's son, Nemo.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/zoo.jpeg" alt="Zootopia">
+            <div class="movie-info">
+                <h3>Zootopia</h3>
+                <p><strong>Release Year:</strong> 2016</p>
+                <p>Follow Judy Hopps, a bunny cop, and Nick Wilde, a sly fox, as they solve a mystery in the city of Zootopia.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/kungfupanda.jpg" alt="Kung Fu Panda">
+            <div class="movie-info">
+                <h3>Kung Fu Panda</h3>
+                <p><strong>Release Year:</strong> 2008</p>
+                <p>Join Po, a panda with dreams of becoming a kung fu master, on his action-packed journey.</p>
+            </div>
+        </li>
+       
+        <li class="movie">
+            <img src="./movie/scooby.jpg" alt="Scooby-Doo! Mystery Incorporated">
+            <div class="movie-info">
+                <h3>Scooby-Doo! Mystery Incorporated</h3>
+                <p><strong>Release Year:</strong> 2010</p>
+                <p>Scooby-Doo and the gang solve mysteries in the spooky town of Crystal Cove in this animated series.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/scooby_.jpg" alt="Scooby-Doo on Zombie Island">
+            <div class="movie-info">
+                <h3>Scooby-Doo on Zombie Island</h3>
+                <p><strong>Release Year:</strong> 1998</p>
+                <p>Scooby-Doo and the gang encounter real supernatural creatures on a haunted island in this animated movie.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/lion.jpeg" alt="Scooby-Doo on Zombie Island">
+            <div class="movie-info">
+                <h3>The Lion King</h3>
+                <p><strong>Release Year:</strong> 1994</p>
+                <p>This Disney animated feature follows the adventures of the young lion Simba (Jonathan Taylor Thomas), the heir of his father, Mufasa (James Earl Jones).</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/p_beautyandthebeast1991_20488_592ec4b5.jpeg" alt="Scooby-Doo on Zombie Island">
+            <div class="movie-info">
+                <h3>Beauty and the Beast</h3>
+                <p><strong>Release Year:</strong> 1991</p>
+                <p>An arrogant young prince (Robby Benson) and his castle's servants fall under the spell of a wicked enchantress, who turns him into the hideous Beast until he learns to love and be loved in return.</p>
+            </div>
+        </li>
+        
+       
+    </ul>
+    <footer>
+        <p>&copy; 2023 About Us Company</p>
+    </footer>
+    <script>
+       
+        const movieItems = document.querySelectorAll('.movie');
+
+        movieItems.forEach((item) => {
+            item.addEventListener('click', () => {
+         
+                item.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>

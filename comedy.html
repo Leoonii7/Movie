@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedy Movies</title>
+   ><style>
+  
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-details {
+            padding: 20px;
+        }
+
+        .movie-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(20% - 20px); /* 20% width for each movie with 20px margin in between */
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        li img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .movie-info {
+            text-align: center;
+        }
+
+        .movie-info h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        .movie-info {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        
+        .selected .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .movie {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+    
+        .movie:hover {
+            transform: scale(1.05);
+        }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Comedy Movies</h1>
+    </header>
+    
+    
+
+    <main>
+      
+        <section class="movie-details">
+            <h2>Comedy Movies</h2>
+            <ul>
+                <li class="movie">
+                    <img src="./movie/superbad.jpg" alt="Superbad">
+                    <div class="movie-info">
+                        <h3>Superbad</h3>
+                        <p><strong>Cast:</strong> Jonah Hill, Michael Cera, Emma Stone</p>
+                        <p><strong>Year of Production:</strong> 2007</p>
+                        <p>Two high school friends try to make the most of their last days before graduation.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/hangover.jpg" alt="The Hangover">
+                    <div class="movie-info">
+                        <h3>The Hangover</h3>
+                        <p><strong>Cast:</strong> Bradley Cooper, Ed Helms, Zach Galifianakis</p>
+                        <p><strong>Year of Production:</strong> 2009</p>
+                        <p>A bachelor party in Las Vegas turns into a wild adventure with no memory of the previous night.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/dumb.jpg" alt="Dumb and Dumber">
+                    <div class="movie-info">
+                        <h3>Dumb and Dumber</h3>
+                        <p><strong>Cast:</strong> Jim Carrey, Jeff Daniels, Lauren Holly</p>
+                        <p><strong>Year of Production:</strong> 1994</p>
+                        <p>Two well-meaning but incredibly stupid friends embark on a cross-country trip.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/anchorman.jpg" alt="Anchorman">
+                    <div class="movie-info">
+                        <h3>Anchorman</h3>
+                        <p><strong>Cast:</strong> Will Ferrell, Christina Applegate, Paul Rudd</p>
+                        <p><strong>Year of Production:</strong> 2004</p>
+                        <p>Ron Burgundy, a famous news anchor, faces competition and comedic challenges in his career.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/super.jpg" alt="Super Troopers">
+                    <div class="movie-info">
+                        <h3>Super Troopers</h3>
+                        <p><strong>Cast:</strong> Jay Chandrasekhar, Kevin Heffernan, Steve Lemme</p>
+                        <p><strong>Year of Production:</strong> 2001</p>
+                        <p>A group of goofy highway patrol officers engage in pranks and shenanigans.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/bride1_.jpg" alt="Bridesmaids">
+                    <div class="movie-info">
+                        <h3>Bridesmaids</h3>
+                        <p><strong>Cast:</strong> Kristen Wiig, Maya Rudolph, Melissa McCarthy</p>
+                        <p><strong>Year of Production:</strong> 2011</p>
+                        <p>A woman's life unravels as she competes with her friend's other bridesmaids.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/brothers.jpg" alt="Step Brothers">
+                    <div class="movie-info">
+                        <h3>Step Brothers</h3>
+                        <p><strong>Cast:</strong> Will Ferrell, John C. Reilly, Mary Steenburgen</p>
+                        <p><strong>Year of Production:</strong> 2008</p>
+                        <p>Two middle-aged men become stepbrothers and wreak havoc on their parents' lives.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/ground.jpg" alt="Groundhog Day">
+                    <div class="movie-info">
+                        <h3>Groundhog Day</h3>
+                        <p><strong>Cast:</strong> Bill Murray, Andie MacDowell, Chris Elliott</p>
+                        <p><strong>Year of Production:</strong> 1993</p>
+                        <p>A weatherman finds himself reliving the same day over and over again in Punxsutawney, Pennsylvania.</p>
+                    </div>
+                </li>
+                <li class="movie">
+                    <img src="./movie/legend.jpg" alt="Anchorman">
+                    <div class="movie-info">
+                        <h3>Anchorman: The Legend of Ron Burgundy</h3>
+                        <p><strong>Cast:</strong> Will Ferrell, Christina Applegate, Paul Rudd</p>
+                        <p><strong>Year of Production:</strong> 2004</p>
+                        <p>Ron Burgundy, a famous news anchor, faces competition and comedic challenges </p>
+                    </div>
+                    </li>
+                    <li class="movie">
+                        <img src="./movie/hot.jpg" alt="Hot Fuzz">
+                        <div class="movie-info">
+                            <h3>Hot Fuzz</h3>
+                            <p><strong>Cast:</strong> Simon Pegg, Nick Frost, Timothy Dalton</p>
+                            <p><strong>Year of Production:</strong> 2007</p>
+                            <p>A top London cop is reassigned to a quiet town, but he soon discovers a series of sinister events.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="movie">
+                        <img src="./movie/Airplane!_(1980_film).jpg" alt="Airplane!">
+                        <div class="movie-info">
+                            <h3>Airplane!</h3>
+                            <p><strong>Cast:</strong> Robert Hays, Julie Hagerty, Leslie Nielsen</p>
+                            <p><strong>Year of Production:</strong> 1980</p>
+                            <p>A hilarious parody of disaster movies, with a crew and passengers dealing with absurd situations on a troubled flight.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="movie">
+                        <img src="./movie/Zoolander_2_poster.jpg" alt="Zoolander">
+                        <div class="movie-info">
+                            <h3>Zoolander</h3>
+                            <p><strong>Cast:</strong> Ben Stiller, Owen Wilson, Will Ferrell</p>
+                            <p><strong>Year of Production:</strong> 2001</p>
+                            <p>A dim-witted male model is brainwashed to assassinate the Prime Minister of Malaysia in this comedy film.</p>
+                        </div>
+                    </li>
+                    
+                </ul>
+
+            </section>
+            </main>
+            <footer>
+                <p>&copy; 2023 About Us Company</p>
+            </footer>
+             <script>
+       
+                const movieItems = document.querySelectorAll('.movie');
+        
+                movieItems.forEach((item) => {
+                    item.addEventListener('click', () => {
+                 
+                        item.classList.toggle('selected');
+                    });
+                });
+            </script>
+            </body>
+            </html>
+            

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Movie Tickets</title>
+    <style>
+        /* CSS styles for the Get Movie Tickets page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-form {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Get Movie Tickets</h1>
+    </header>
+
+    <main>
+        <section class="ticket-form">
+            <h2>Select Your Movie and Tickets</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="movie">Movie:</label>
+                    <select id="movie" name="movie" required>
+                        <option value="madmax">Mad Max: Fury Road</option>
+                        <option value="johnwick">John Wick</option>
+                        <option value="darkknight">The Dark Knight</option>
+                        <option value="diehard">Die Hard</option>
+                        <option value="matrix">The Matrix</option>
+                        <option value="gladiator">Gladiator</option>
+                        <option value="diehard3">Die Hard with a Vengeance</option>
+                        <option value="speed">Speed</option>
+                        <option value="terminator2">Terminator 2: Judgment Day</option>
+                        <option value="madmax2">Mad Max 2: The Road Warrior</option>
+                        <option value="superbad">Superbad</option>
+                        <option value="hangover">The Hangover</option>
+                        <option value="dumb">Dumb and Dumber</option>
+                        <option value="anchorman">Anchorman</option>
+                        <option value="super">Super Troopers</option>
+                        <option value="bridesmaids">Bridesmaids</option>
+                        <option value="stepbrothers">Step Brothers</option>
+                        <option value="groundhog">Groundhog Day</option>
+                        <option value="legend">Anchorman: The Legend of Ron Burgundy</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit"><a href="payment.html"> Get Tickets</a></button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Get Movie Tickets Company</p>
+    </footer>
+</body>
+</html>

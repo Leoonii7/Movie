@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Movies</title>
+  <style>
+ 
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-details {
+            padding: 20px;
+        }
+
+        .movie-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(20% - 20px); /* 20% width for each movie with 20px margin in between */
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        li img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .movie-info {
+            text-align: center;
+        }
+
+        .movie-info h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        .movie-info {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        
+        .selected .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .movie {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+    
+        .movie:hover {
+            transform: scale(1.05);
+        }
+  </style>
+</head>
+<body>
+    <header>
+       
+        <h1>Action Movies</h1>
+    </header>
+
+    <main>
+        <section class="movie-details">
+            <h2>Action Movies</h2>
+            <ul>
+                <li class="movie">
+                    <img src="./movie/mad.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                        <h3>Mad Max: Fury Road</h3>
+                        <p><strong>Cast:</strong> Tom Hardy, Charlize Theron, Nicholas Hoult</p>
+                        <p><strong>Year of Production:</strong> 2015</p>
+                        <p>In a post-apocalyptic wasteland, Max teams up with Furiosa to escape a tyrannical warlord.</p>
+                        <button class="add-to-file">Add to File</button>
+                    </div>
+                </li>
+                
+                
+                <li class="movie">
+                    <img src="./movie/john-wick-movie-bg01-portrait.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                        <h3>John Wick</h3>
+                        <p><strong>Cast:</strong> Keanu Reeves, Michael Nyqvist, Alfie Allen</p>
+                        <p><strong>Year of Production:</strong> 2014</p>
+                        <p>Retired hitman John Wick seeks vengeance against those who wronged him.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/dark_.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <p><strong>Cast:</strong> Christian Bale, Heath Ledger, Aaron Eckhart</p>
+                    <p><strong>Year of Production:</strong> 2008</p>
+                    <p>Batman faces the Joker in a battle of chaos and order in Gotham City.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/die.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>Die Hard</h3>
+                    <p><strong>Cast:</strong> Bruce Willis, Alan Rickman, Bonnie Bedelia</p>
+                    <p><strong>Year of Production:</strong> 1988</p>
+                    <p>NY cop John McClane takes on terrorists who have taken hostages in a skyscraper.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/matrixjpg.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>The Matrix</h3>
+                    <p><strong>Cast:</strong> Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss</p>
+                    <p><strong>Year of Production:</strong> 1999</p>
+                    <p>Neo discovers the truth about reality and battles machines in a virtual world.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/gladiator.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>Gladiator</h3>
+                    <p><strong>Cast:</strong> Russell Crowe, Joaquin Phoenix, Connie Nielsen</p>
+                    <p><strong>Year of Production:</strong> 2000</p>
+                    <p>Maximus seeks revenge against the corrupt emperor who murdered his family.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/die-hard-3.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>Die Hard with a Vengeance</h3>
+                    <p><strong>Cast:</strong> Bruce Willis, Samuel L. Jackson, Jeremy Irons</p>
+                    <p><strong>Year of Production:</strong> 1995</p>
+                    <p>John McClane must solve puzzles to prevent bombings in New York City.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/speed.jpg" alt=" Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>Speed</h3>
+                    <p><strong>Cast:</strong> Keanu Reeves, Sandra Bullock, Dennis Hopper</p>
+                    <p><strong>Year of Production:</strong> 1994</p>
+                    <p>A cop must prevent a bomb from exploding on a city bus by keeping its speed above 50 mph.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/terminator.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>Terminator 2: Judgment Day</h3>
+                    <p><strong>Cast:</strong> Arnold Schwarzenegger, Linda Hamilton, Edward Furlong</p>
+                    <p><strong>Year of Production:</strong> 1991</p>
+                    <p>The Terminator returns to protect John Connor from a more advanced cyborg.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/madmax2_.jpg" alt="Mad Max: Fury Road">
+                    <div class="movie-info">
+                    <h3>Mad Max 2: The Road Warrior</h3>
+                    <p><strong>Cast:</strong> Mel Gibson, Bruce Spence, Michael Preston</p>
+                    <p><strong>Year of Production:</strong> 1981</p>
+                    <p>Max helps a group of survivors in a post-apocalyptic wasteland battle for gasoline.</p>
+                </li>
+                <li class="movie">
+                    <img src="./movie/91zSOPqtunL._AC_UF894,1000_QL80_.jpg" alt="The Expendables">
+                    <div class="movie-info">
+                        <h3>The Expendables</h3>
+                        <p><strong>Cast:</strong> Sylvester Stallone, Jason Statham, Jet Li</p>
+                        <p><strong>Year of Production:</strong> 2010</p>
+                        <p>A group of elite mercenaries is tasked with overthrowing a dictator in a South American country.</p>
+                    </div>
+                </li>
+                
+                <li class="movie">
+                    <img src="./movie/italian.jpg" alt="The Italian Job">
+                    <div class="movie-info">
+                        <h3>The Italian Job</h3>
+                        <p><strong>Cast:</strong> Mark Wahlberg, Charlize Theron, Edward Norton</p>
+                        <p><strong>Year of Production:</strong> 2003</p>
+                        <p>A team of thieves plans and executes a heist in Venice, Italy, and a gold robbery in Los Angeles.</p>
+                    </div>
+                </li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+      
+        <p>&copy; 2023 Action Movie Database</p>
+    </footer>
+    <script>
+       
+        const movieItems = document.querySelectorAll('.movie');
+
+        movieItems.forEach((item) => {
+            item.addEventListener('click', () => {
+         
+                item.classList.toggle('selected');
+            });
+        });
+        
+    </script>
+</body>
+</html>

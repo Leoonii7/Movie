@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-details {
+            padding: 20px;
+        }
+
+        .movie-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(20% - 20px); /* 20% width for each movie with 20px margin in between */
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        li img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .movie-info {
+            text-align: center;
+        }
+
+        .movie-info h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        .movie-info {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        
+        .selected .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .movie {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+    
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        .movie-info {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        
+        .selected .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .movie {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+    
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="documentary-list">
+        <li class="movie">
+            <img src="./movie/earth.jpg" alt="Planet Earth">
+            <div class="movie-info">
+                <h3>Planet Earth</h3>
+                <p><strong>Release Year:</strong> 2006</p>
+                <p>Explore the beauty and wonders of our planet through breathtaking wildlife and nature footage.</p>
+            </div>
+        </li>
+        
+        <li class="movie">
+           <img src="./movie/cosmos.jpg" alt="Cosmos: A Spacetime Odyssey">
+            <div class="movie-info">
+                <h3>Cosmos: A Spacetime Odyssey</h3>
+                <p><strong>Release Year:</strong> 2014</p>
+                <p>Embark on a journey through space and time with astrophysicist Neil deGrasse Tyson in this captivating series.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/foodinc.jpg" alt="Food, Inc.">
+            <div class="movie-info">
+                <h3>Food, Inc.</h3>
+                <p><strong>Release Year:</strong> 2008</p>
+                <p>Examine the food industry's impact on health, environment, and society in this eye-opening documentary.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/luisfigo.jpg" alt="Food, Inc.">
+            <div class="movie-info">
+                <h3>The Luis Figo affair</h3>
+                <p><strong>Release Year:</strong> 2022</p>
+                <p>Relive the moments of legendary footballer Luis Figo during his transfer from VARcelona to Real Madrid.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/realmadrid.jpg" alt="Food, Inc.">
+            <div class="movie-info">
+                <h3>Real Madrid until the end</h3>
+                <p><strong>Release Year:</strong> 2023</p>
+                <p>Enjoy the mmoments from 2022-2023 season when Real Madrid won five titles.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/Ronaldo_2015_film_poster.png" alt= "Food, Inc.">
+            <div class="movie-info">
+                <h3>Ronaldo.</h3>
+                <p><strong>Release Year:</strong> 2015</p>
+                <p>Watch the documentary about the career of the greates player of all time.</p>
+            </div>
+        </li>
+
+        
+        <li class="movie">
+            <img src="./movie/universe.jpg" alt="The Universe: A Journey Through Space and Time">
+            <div class="movie-info">
+                <h3>The Universe: A Journey Through Space and Time</h3>
+                <p><strong>Release Year:</strong> 2010</p>
+                <p>Explore the mysteries of the universe and its vastness in this captivating documentary series.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/wildlifejpg.jpg" alt="Wildlife Chronicles">
+            <div class="movie-info">
+                <h3>Wildlife Chronicles</h3>
+                <p><strong>Release Year:</strong> 2018</p>
+                <p>Witness the incredible stories of wildlife in their natural habitats from around the world.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/history.jpg" alt="History's Mysteries">
+            <div class="movie-info">
+                <h3>History's Mysteries</h3>
+                <p><strong>Release Year:</strong> 2015</p>
+                <p>Uncover some of history's greatest mysteries and unsolved puzzles in this thought-provoking documentary series.</p>
+            </div>
+        </li>
+
+        <li class="movie">
+            <img src="./movie/a-plastic-ocean.png" alt="Oceans: Exploring the Deep Blue">
+            <div class="movie-info">
+                <h3>Oceans: Exploring the Deep Blue</h3>
+                <p><strong>Release Year:</strong> 2019</p>
+                <p>Dive into the depths of the world's oceans and discover the mesmerizing marine life that inhabits them.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/schu.jpg" alt="Oceans: Exploring the Deep Blue">
+            <div class="movie-info">
+                <h3>Schumacher</h3>
+                <p><strong>Release Year:</strong> 2021</p>
+                <p>Explores the life and career of seven-time Formula 1 champion Michael Schumacher and his family, friends and colleagues.</p>
+            </div>
+        </li>
+        <li class="movie">
+            <img src="./movie/ali.jpg" alt="Oceans: Exploring the Deep Blue">
+            <div class="movie-info">
+                <h3>Muhammad Ali</h3>
+                <p><strong>Release Year:</strong> 1996</p>
+                <p>n October 30, 1974, perhaps the most famous heavyweight championship boxing match of all time took place in Kinshasa, Zaire: the "Rumble in the Jungle" between champion George Foreman and challenger Muhammad Ali..</p>
+            </div>
+        </li>
+    </ul>
+    <footer>
+        <p>&copy; 2023 About Us Company</p>
+    </footer>
+</body>
+</html>
+ <script>
+       
+        const movieItems = document.querySelectorAll('.movie');
+
+        movieItems.forEach((item) => {
+            item.addEventListener('click', () => {
+         
+                item.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>
